@@ -351,7 +351,7 @@ template {
   color: #103371;
   position: sticky;
   top: 0;
-  z-index: 9;
+  z-index: 999;
   background-color: #fff;
 }
 .nav .logo {
@@ -440,7 +440,7 @@ template {
   width: 100%;
   bottom: 0;
   object-fit: cover;
-  z-index: -1;
+  z-index: -9;
   object-fit: cover;
 }
 
@@ -455,6 +455,80 @@ template {
 @media screen and (min-width: 1200px) {
   .hero .splash {
     bottom: -190px;
+  }
+}
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.about-us .welcome {
+  display: flex;
+  flex-direction: column;
+  border-radius: 80px 20px 80px 20px;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+  height: 800px;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+.about-us .welcome .top {
+  padding: 40px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-us .welcome .top span {
+  color: #f8ab13;
+  font-size: 16px;
+  font-weight: normal;
+}
+.about-us .welcome .top h1 {
+  color: #103371;
+  font-size: 40px;
+  font-weight: 800;
+}
+.about-us .welcome .top p {
+  line-height: 25px;
+}
+.about-us .welcome .top a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #3c86cb;
+}
+.about-us .welcome .buttom {
+  margin: 0;
+  padding: 0;
+  height: 50%;
+}
+.about-us .welcome .buttom .welcome-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us {
+    margin-top: 50px;
+  }
+  .about-us .welcome {
+    flex-direction: row;
+    height: auto;
+  }
+  .about-us .welcome .top {
+    height: auto;
+  }
+  .about-us .welcome .top h1 {
+    font-size: 52px;
+  }
+  .about-us .welcome .buttom {
+    height: auto;
   }
 }
 

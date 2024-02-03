@@ -20,7 +20,7 @@
   }
 
   h1 {
-    font-size: $mobile-banner-font-size;
+    font-size: $mobile-heading-font-size;
     font-weight: $banner-font-weight;
     margin: 0;
   }
@@ -45,7 +45,7 @@
     width: 100%;
     bottom: 0;
     object-fit: cover;
-    z-index: -1;
+    z-index: -9;
     object-fit: cover;
   }
 }
