@@ -398,7 +398,7 @@ template {
   text-align: center;
   padding: 50px;
   gap: 20px;
-  background-image: url("../../../public/banner.jpg");
+  background-image: url("./public/banner.jpg");
   height: calc(100vh - 100px);
   background-position: center;
   color: white;
