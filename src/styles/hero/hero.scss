@@ -1,0 +1,71 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  gap: 20px;
+  background-image: url("../../../public/banner.jpg");
+  height: calc(100vh - 100px);
+  background-position: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+
+  span {
+    color: $secondary-color;
+    font-size: $section-font-size;
+    font-weight: $section-font-weight;
+  }
+
+  h1 {
+    font-size: $mobile-banner-font-size;
+    font-weight: $banner-font-weight;
+    margin: 0;
+  }
+
+  p {
+    font-size: $paragraph-font-size;
+    font-weight: $parargraph-font-weight;
+  }
+
+  .discover-btn {
+    @include primaryButton();
+    display: flex;
+    align-items: center;
+    gap:10px;
+  }
+  .discover-btn:hover{
+    background-color: $primary-color;
+  }
+
+  .splash{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    object-fit: cover;
+    z-index: -1;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    h1 {
+      font-size: $banner-font-size;
+    }
+
+    .splash{
+        bottom: -100px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+   
+    .splash{
+        bottom: -190px;
+    }
+  }
+}
