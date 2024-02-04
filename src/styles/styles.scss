@@ -1,10 +1,11 @@
+@import "./partials/variables";
 @import "./partials/reset";
+@import "./partials/utils";
 
 @import "./partials/base";
-@import "./partials/variables";
-@import "./partials/utils";
 @import "./partials/mixins";
 
 @import "./header/header.scss";
 @import "./hero/hero.scss";
 @import "./about-us/aboutus.scss";
+@import "./products/products.scss";

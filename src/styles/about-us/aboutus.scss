@@ -2,15 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
   z-index: 9;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
 
   .welcome {
     display: flex;
     flex-direction: column;
     border-radius: 80px 20px 80px 20px;
-    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: $card-box-shadow;
     height: 800px;
     width: 100%;
     overflow: hidden;
@@ -58,6 +60,169 @@
       }
     }
   }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding-top: 50px;
+
+    .left {
+      width: 100%;
+      height: 600px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 80px 0px 0px 80px;
+      }
+
+      .left-badge {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        height: 15%;
+        width: 98%;
+        background-color: $primary-text-color;
+        border-radius: 0px 0px 0px 80px;
+
+
+        h3 {
+          color: white;
+          span {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    .center {
+      width: 100%;
+      height: 450px;
+      border-radius: 0px 80px 0px 0px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+
+      span {
+        color: $secondary-color;
+      }
+
+      h1 {
+        color: $primary-text-color;
+      }
+
+      p {
+        font-size: $paragraph-font-size;
+        font-weight: $parargraph-font-weight;
+        line-height: $paragraph-line-height;
+      }
+      .vision-mission {
+        color: $primary-text-color;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 50px;
+
+        .vision .mission {
+          display: flex;
+          flex-direction: column;
+        }
+
+        h5 {
+          margin: 0;
+          padding: 0;
+          font-size: $section-font-size;
+        }
+        ul {
+          color: $paragraph-font-color;
+          font-size: $paragraph-font-size;
+          list-style: none;
+          padding: 0;
+
+          li {
+            line-height: $paragraph-line-height;
+            font-size: $thin-font-size;
+          }
+        }
+      }
+
+      button {
+        @include primaryButton();
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        width: 70%;
+        
+      }
+    }
+  }
+
+  .experience-card {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: $card-border-radius;
+    background-color: #fff;
+    box-shadow: $card-box-shadow;
+    padding: 20px;
+    
+
+    .experience {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .experience-logo {
+        width: 5%;
+        height: auto;
+        margin: 0;
+        padding: 10px;
+        object-fit: cover;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .experience-details {
+        h3 {
+          color: $primary-text-color;
+          margin: 0;
+          padding: 0;
+        }
+        
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -78,6 +243,37 @@
       }
       .buttom {
         height: auto;
+      }
+    }
+
+    .about {
+      flex-direction: row;
+      align-items: end;
+
+      .left {
+        .left-badge {
+          width: 130%;
+          bottom: -30px;
+          border-radius: 0px 80px 0px 80px;
+        }
+      }
+
+      .right {
+        padding-left: 20px;
+      }
+    }
+
+    .experience-card{
+      flex-direction: row;
+      justify-content: space-between;
+      bottom: -180px;
+
+      .experience{
+        width: 30%;
+        .experience-logo{
+          width: auto;
+          aspect-ratio: 1;
+        }
       }
     }
   }

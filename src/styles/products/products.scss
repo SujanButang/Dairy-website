@@ -1,0 +1,116 @@
+.products {
+  min-height: calc(100vh - 100px);
+  width: 100%;
+  background-color: #f0fcff;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 300px;
+  padding-bottom: 300px;
+  gap: 50px;
+
+  span {
+    color: $secondary-color;
+    font-size: $section-font-size;
+    font-weight: $section-font-weight;
+  }
+
+  .product-heading {
+    color: $primary-text-color;
+    font-size: $heading-font-size;
+    padding: 0;
+    margin: 0;
+  }
+
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    .product {
+      height: 450px;
+      width: 250px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 80px 20px 20px 20px;
+      box-shadow: $card-box-shadow;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      cursor: pointer;
+
+      .product-image {
+        height: 60%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      h1 {
+        color: $primary-text-color;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $secondary-color;
+        span {
+          font-size: $section-font-size;
+          font-weight: $section-font-weight;
+        }
+
+        .buttons {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .product-button {
+            display: flex;
+            align-items: center;
+            border: none;
+            background-color: #ededf0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .product:hover {
+      background-color: $primary-text-color;
+
+      h1 {
+        color: white;
+      }
+      p {
+        color: white;
+      }
+    }
+  }
+  .all-products {
+    display: flex;
+    align-items: center;
+    @include primaryButton();
+    margin-top: 50px;
+    gap: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .products {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
