@@ -23,11 +23,13 @@
     font-size: $mobile-heading-font-size;
     font-weight: $banner-font-weight;
     margin: 0;
+    // color: $primary-text-color;
   }
 
   p {
     font-size: $paragraph-font-size;
     font-weight: $parargraph-font-weight;
+    // color: $paragraph-font-color
   }
 
   .discover-btn {
