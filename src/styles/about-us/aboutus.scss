@@ -11,7 +11,7 @@
   .welcome {
     display: flex;
     flex-direction: column;
-    border-radius: 80px 20px 80px 20px;
+    border-radius: 10px;
     box-shadow: $card-box-shadow;
     height: 800px;
     width: 100%;
@@ -79,7 +79,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 80px 0px 0px 80px;
+        border-radius:10px;
       }
 
       .left-badge {
@@ -91,11 +91,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 5px;
         height: 15%;
-        width: 98%;
+        width: 100%;
         background-color: $primary-text-color;
-        border-radius: 0px 0px 0px 80px;
+        border-radius: 0px 0px 10px 10px;
 
         h3 {
           color: white;
@@ -111,7 +110,7 @@
     .center {
       width: 100%;
       height: 450px;
-      border-radius: 0px 80px 0px 0px;
+      border-radius: 10px;
       overflow: hidden;
       margin: 0;
       padding: 0;
@@ -173,11 +172,12 @@
       }
 
       button {
-        @include primaryButton();
+        @include mobileButton();
         display: flex;
         gap: 5px;
         align-items: center;
-        width: 70%;
+        justify-content: center;
+        width: 60%;
       }
     }
   }
@@ -232,6 +232,7 @@
 
     .welcome {
       flex-direction: row;
+      border-radius: 80px 20px 80px 20px;
 
       height: auto;
 
@@ -247,20 +248,11 @@
       }
     }
 
-    .about {
-      flex-direction: row;
-      align-items: end;
-
-      .left {
-        .left-badge {
-          width: 130%;
-          bottom: -30px;
-          border-radius: 0px 80px 0px 80px;
+    .about{
+      .right{
+        button{
+          @include primaryButton();
         }
-      }
-
-      .right {
-        padding-left: 20px;
       }
     }
 
@@ -275,6 +267,36 @@
           width: auto;
           aspect-ratio: 1;
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .about-us {
+    .about {
+      flex-direction: row;
+      align-items: end;
+
+      .left {
+        .left-badge {
+          width: 130%;
+          bottom: -30px;
+          border-radius: 0px 80px 0px 80px;
+        }
+        .image{
+          border-radius:  80px 0px 0px 80px;
+        }
+      }
+
+      .center{
+        .image{
+          border-radius: 0px 80px 0px 0px;
+        }
+      }
+
+      .right {
+        padding-left: 20px;
       }
     }
   }

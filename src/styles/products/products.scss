@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 300px;
-  padding-bottom: 300px;
+  padding-bottom: 50px;
   gap: 50px;
 
   span {
@@ -100,9 +100,9 @@
     }
   }
   .all-products {
+    @include mobileButton();
     display: flex;
     align-items: center;
-    @include primaryButton();
     margin-top: 50px;
     gap: 5px;
   }
@@ -115,6 +115,10 @@
 
     .product-heading {
       font-size: $heading-font-size;
+    }
+
+    .all-products{
+      @include primaryButton();
     }
   }
 }

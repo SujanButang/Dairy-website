@@ -33,16 +33,16 @@
   }
 
   .discover-btn {
-    @include primaryButton();
+    @include mobileButton();
     display: flex;
     align-items: center;
-    gap:10px;
+    gap: 10px;
   }
-  .discover-btn:hover{
+  .discover-btn:hover {
     background-color: $primary-color;
   }
 
-  .splash{
+  .splash {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -58,16 +58,18 @@
       font-size: $banner-font-size;
     }
 
-    .splash{
-        bottom: -100px;
+    .splash {
+      bottom: -100px;
+    }
+    .discover-btn {
+      @include primaryButton();
     }
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-   
-    .splash{
-        bottom: -190px;
+    .splash {
+      bottom: -190px;
     }
   }
 }

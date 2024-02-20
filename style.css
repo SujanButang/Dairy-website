@@ -421,7 +421,7 @@ template {
   font-weight: normal;
 }
 .hero .discover-btn {
-  border-radius: 0px 30px 0px 30px;
+  border-radius: 5px;
   padding: 20px 40px 20px 40px;
   border: none;
   background-color: #3c86cb;
@@ -452,6 +452,16 @@ template {
   .hero .splash {
     bottom: -100px;
   }
+  .hero .discover-btn {
+    border-radius: 0px 30px 0px 30px;
+    padding: 20px 40px 20px 40px;
+    border: none;
+    background-color: #3c86cb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero .splash {
@@ -471,7 +481,7 @@ template {
 .about-us .welcome {
   display: flex;
   flex-direction: column;
-  border-radius: 80px 20px 80px 20px;
+  border-radius: 10px;
   box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
   height: 800px;
   width: 100%;
@@ -534,7 +544,7 @@ template {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 80px 0px 0px 80px;
+  border-radius: 10px;
 }
 .about-us .about .left .left-badge {
   position: absolute;
@@ -545,11 +555,10 @@ template {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
   height: 15%;
-  width: 98%;
+  width: 100%;
   background-color: #103371;
-  border-radius: 0px 0px 0px 80px;
+  border-radius: 0px 0px 10px 10px;
 }
 .about-us .about .left .left-badge h3 {
   color: white;
@@ -562,7 +571,7 @@ template {
 .about-us .about .center {
   width: 100%;
   height: 450px;
-  border-radius: 0px 80px 0px 0px;
+  border-radius: 10px;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -617,7 +626,7 @@ template {
   font-size: 14px;
 }
 .about-us .about .right button {
-  border-radius: 0px 30px 0px 30px;
+  border-radius: 5px;
   padding: 20px 40px 20px 40px;
   border: none;
   background-color: #3c86cb;
@@ -628,7 +637,8 @@ template {
   display: flex;
   gap: 5px;
   align-items: center;
-  width: 70%;
+  justify-content: center;
+  width: 60%;
 }
 .about-us .experience-card {
   position: absolute;
@@ -673,6 +683,7 @@ template {
   }
   .about-us .welcome {
     flex-direction: row;
+    border-radius: 80px 20px 80px 20px;
     height: auto;
   }
   .about-us .welcome .top {
@@ -684,17 +695,15 @@ template {
   .about-us .welcome .buttom {
     height: auto;
   }
-  .about-us .about {
-    flex-direction: row;
-    align-items: end;
-  }
-  .about-us .about .left .left-badge {
-    width: 130%;
-    bottom: -30px;
-    border-radius: 0px 80px 0px 80px;
-  }
-  .about-us .about .right {
-    padding-left: 20px;
+  .about-us .about .right button {
+    border-radius: 0px 30px 0px 30px;
+    padding: 20px 40px 20px 40px;
+    border: none;
+    background-color: #3c86cb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
   }
   .about-us .experience-card {
     flex-direction: row;
@@ -709,6 +718,26 @@ template {
     aspect-ratio: 1;
   }
 }
+@media screen and (min-width: 1100px) {
+  .about-us .about {
+    flex-direction: row;
+    align-items: end;
+  }
+  .about-us .about .left .left-badge {
+    width: 130%;
+    bottom: -30px;
+    border-radius: 0px 80px 0px 80px;
+  }
+  .about-us .about .left .image {
+    border-radius: 80px 0px 0px 80px;
+  }
+  .about-us .about .center .image {
+    border-radius: 0px 80px 0px 0px;
+  }
+  .about-us .about .right {
+    padding-left: 20px;
+  }
+}
 .products {
   min-height: calc(100vh - 100px);
   width: 100%;
@@ -719,7 +748,7 @@ template {
   align-items: center;
   justify-content: center;
   padding-top: 300px;
-  padding-bottom: 300px;
+  padding-bottom: 50px;
   gap: 50px;
 }
 .products span {
@@ -800,9 +829,7 @@ template {
   color: white;
 }
 .products .all-products {
-  display: flex;
-  align-items: center;
-  border-radius: 0px 30px 0px 30px;
+  border-radius: 5px;
   padding: 20px 40px 20px 40px;
   border: none;
   background-color: #3c86cb;
@@ -810,6 +837,8 @@ template {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   margin-top: 50px;
   gap: 5px;
 }
@@ -821,6 +850,16 @@ template {
   }
   .products .product-heading {
     font-size: 52px;
+  }
+  .products .all-products {
+    border-radius: 0px 30px 0px 30px;
+    padding: 20px 40px 20px 40px;
+    border: none;
+    background-color: #3c86cb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
   }
 }
 .services {
@@ -837,7 +876,7 @@ template {
   margin: 0;
 }
 .services .service-left img {
-  border-radius: 0px 80px 0px 0px;
+  border-radius: 10px;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -863,7 +902,7 @@ template {
   gap: 5px;
 }
 .services .service-center button {
-  border-radius: 0px 30px 0px 30px;
+  border-radius: 5px;
   padding: 20px 40px 20px 40px;
   border: none;
   background-color: #3c86cb;
@@ -891,7 +930,7 @@ template {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 80px 0px 80px 0px;
+  border-radius: 10px;
 }
 .services .service-right h3 {
   font-size: 40px;
@@ -913,7 +952,25 @@ template {
   font-weight: 600;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
+  .services .service-left img {
+    border-radius: 0px 80px 0px 0px;
+  }
+  .services .service-center button {
+    border-radius: 0px 30px 0px 30px;
+    padding: 20px 40px 20px 40px;
+    border: none;
+    background-color: #3c86cb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .services .service-right figure img {
+    border-radius: 80px 0px 80px 0px;
+  }
+}
+@media screen and (min-width: 1300px) {
   .services {
     padding: 100px 0px 100px 0px;
     flex-direction: row;
@@ -951,7 +1008,7 @@ template {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0px 80px 0px 0px;
+  border-radius: 10px;
 }
 .advantages .our-advantages span {
   color: #f8ab13;
@@ -969,11 +1026,18 @@ template {
   line-height: 25px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
+  .advantages {
+    width: 100%;
+  }
+  .advantages .advantage-image img {
+    border-radius: 0px 80px 0px 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .advantages {
     flex-direction: row;
     position: relative;
-    width: 100%;
   }
   .advantages .advantage-image {
     width: 60%;
@@ -993,7 +1057,6 @@ template {
   }
 }
 .testimonials {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1010,6 +1073,7 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 .testimonials .testimonial-details span {
   color: #f8ab13;
@@ -1070,7 +1134,7 @@ template {
   right: 30px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .testimonials .testimonial-container {
     flex-direction: row;
   }

@@ -8,3 +8,14 @@
   font-weight: $button-font-weight;
   cursor: pointer;
 }
+
+@mixin mobileButton(){
+  border-radius: $mobile-button-border-radius;
+  padding: $mobile-button-padding;
+  border: none;
+  background-color: $primary-color;
+  color: white;
+  font-size: $mobile-button-font-size;
+  font-weight: $mobile-button-font-weight;
+  cursor: pointer;
+}
