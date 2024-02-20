@@ -23,6 +23,8 @@
       color: $primary-text-color;
       font-size: $mobile-heading-font-size;
       font-weight: $heading-font-weight;
+      margin: 0;
+      margin-top: 20px;
     }
 
     p {
@@ -98,11 +100,11 @@
       text-align: left;
       align-items: start;
 
-      h1{
+      h1 {
         font-size: $heading-font-size;
       }
 
-      button{
+      button {
         @include primaryButton();
       }
     }
