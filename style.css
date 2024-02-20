@@ -412,13 +412,14 @@ template {
   font-weight: 600;
 }
 .hero h1 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   margin: 0;
 }
 .hero p {
   font-size: 16px;
   font-weight: normal;
+  line-height: 25px;
 }
 .hero .discover-btn {
   border-radius: 5px;
@@ -429,6 +430,9 @@ template {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -502,7 +506,7 @@ template {
 }
 .about-us .welcome .top h1 {
   color: #103371;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 800;
 }
 .about-us .welcome .top p {
@@ -592,6 +596,7 @@ template {
   font-weight: 600;
 }
 .about-us .about .right h1 {
+  font-size: 32px;
   color: #103371;
 }
 .about-us .about .right p {
@@ -634,6 +639,9 @@ template {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   display: flex;
   gap: 5px;
   align-items: center;
@@ -695,6 +703,9 @@ template {
   .about-us .welcome .buttom {
     height: auto;
   }
+  .about-us .about .right h1 {
+    font-size: 52px;
+  }
   .about-us .about .right button {
     border-radius: 0px 30px 0px 30px;
     padding: 20px 40px 20px 40px;
@@ -747,9 +758,9 @@ template {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 300px;
+  padding-top: 350px;
   padding-bottom: 50px;
-  gap: 50px;
+  gap: 30px;
 }
 .products span {
   color: #f8ab13;
@@ -758,7 +769,7 @@ template {
 }
 .products .product-heading {
   color: #103371;
-  font-size: 40px;
+  font-size: 32px;
   padding: 0;
   margin: 0;
 }
@@ -774,7 +785,7 @@ template {
   width: 250px;
   padding: 20px;
   background-color: white;
-  border-radius: 80px 20px 20px 20px;
+  border-radius: 10px;
   box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -794,6 +805,12 @@ template {
 }
 .products .products-container .product h1 {
   color: #103371;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+.products .products-container .product p {
+  line-height: 25px;
 }
 .products .products-container .product .actions {
   display: flex;
@@ -839,6 +856,9 @@ template {
   cursor: pointer;
   display: flex;
   align-items: center;
+  gap: 5px;
+  display: flex;
+  align-items: center;
   margin-top: 50px;
   gap: 5px;
 }
@@ -847,6 +867,9 @@ template {
   .products {
     padding-top: 150px;
     padding-bottom: 150px;
+  }
+  .products .products-container .product {
+    border-radius: 80px 20px 20px 20px;
   }
   .products .product-heading {
     font-size: 52px;
@@ -888,7 +911,7 @@ template {
 }
 .services .service-center .service-title {
   color: #103371;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 800;
 }
 .services .service-center .service-list {
@@ -913,6 +936,9 @@ template {
   display: flex;
   align-items: center;
   gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .services .service-right {
   display: flex;
@@ -933,7 +959,7 @@ template {
   border-radius: 10px;
 }
 .services .service-right h3 {
-  font-size: 40px;
+  font-size: 25px;
   font-weight: 800;
   color: #103371;
   padding: 0;
@@ -972,7 +998,7 @@ template {
 }
 @media screen and (min-width: 1300px) {
   .services {
-    padding: 100px 0px 100px 0px;
+    padding: 50px 0px 50px 0px;
     flex-direction: row;
     height: 90vh;
   }
@@ -1019,7 +1045,7 @@ template {
   margin: 5px 0px 0px 0px;
   padding: 0;
   color: #103371;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 800;
 }
 .advantages .our-advantages p {
@@ -1027,15 +1053,13 @@ template {
 }
 
 @media screen and (min-width: 768px) {
-  .advantages {
-    width: 100%;
-  }
   .advantages .advantage-image img {
     border-radius: 0px 80px 0px 0px;
   }
 }
 @media screen and (min-width: 1200px) {
   .advantages {
+    width: 100%;
     flex-direction: row;
     position: relative;
   }
@@ -1081,7 +1105,7 @@ template {
   font-weight: 600;
 }
 .testimonials .testimonial-details h1 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 800;
   color: #103371;
 }
@@ -1135,8 +1159,133 @@ template {
 }
 
 @media screen and (min-width: 768px) {
+  .testimonials {
+    width: 100%;
+  }
   .testimonials .testimonial-container {
     flex-direction: row;
+  }
+}
+.programs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.programs-container .program-details {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.programs-container .program-details span {
+  color: #f8ab13;
+  font-size: 20px;
+  font-weight: 600;
+}
+.programs-container .program-details h1 {
+  color: #103371;
+  font-size: 32px;
+  font-weight: 800;
+}
+.programs-container .program-details p {
+  line-height: 25px;
+}
+.programs-container .program-details button {
+  border-radius: 5px;
+  padding: 20px 40px 20px 40px;
+  border: none;
+  background-color: #3c86cb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.programs-container .programs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.programs-container .programs .program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 30px;
+  min-width: 200px;
+  height: 400px;
+  max-width: 300px;
+}
+.programs-container .programs .program figure {
+  margin: 0;
+  padding: 5px;
+  width: 200px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.programs-container .programs .program figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.programs-container .programs .program .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+}
+.programs-container .programs .program .details h3 {
+  color: #103371;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 10px;
+}
+.programs-container .programs .program .details p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+@media screen and (min-width: 1200px) {
+  .programs-container {
+    flex-direction: row;
+  }
+  .programs-container .program-details {
+    text-align: left;
+    align-items: start;
+  }
+  .programs-container .program-details h1 {
+    font-size: 52px;
+  }
+  .programs-container .program-details button {
+    border-radius: 0px 30px 0px 30px;
+    padding: 20px 40px 20px 40px;
+    border: none;
+    background-color: #3c86cb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .programs-container .programs {
+    flex-wrap: nowrap;
+  }
+  .programs-container .program:nth-child(2) {
+    margin-top: 150px;
   }
 }
 

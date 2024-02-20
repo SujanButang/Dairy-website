@@ -1,0 +1,118 @@
+.programs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .program-details {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      color: $secondary-color;
+      font-size: $section-font-size;
+      font-weight: $section-font-weight;
+    }
+
+    h1 {
+      color: $primary-text-color;
+      font-size: $mobile-heading-font-size;
+      font-weight: $heading-font-weight;
+    }
+
+    p {
+      line-height: $paragraph-line-height;
+    }
+
+    button {
+      @include mobileButton();
+    }
+  }
+
+  .programs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    .program {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: $card-box-shadow;
+      border-radius: 30px;
+      padding: 30px;
+      min-width: 200px;
+      height: 400px;
+      max-width: 300px;
+
+      figure {
+        margin: 0;
+        padding: 5px;
+        width: 200px;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50%;
+        h3 {
+          color: $primary-text-color;
+          font-size: $product-title-font-size;
+          font-weight: $product-title-font-weight;
+          margin: 0;
+          padding-top: 10px;
+        }
+        p {
+          font-size: $thin-font-size;
+          line-height: $paragraph-line-height;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .programs-container {
+    flex-direction: row;
+
+    .program-details {
+      text-align: left;
+      align-items: start;
+
+      h1{
+        font-size: $heading-font-size;
+      }
+
+      button{
+        @include primaryButton();
+      }
+    }
+
+    .programs {
+      flex-wrap: nowrap;
+    }
+
+    .program:nth-child(2) {
+      margin-top: 150px;
+    }
+  }
+}

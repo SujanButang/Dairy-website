@@ -7,9 +7,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 300px;
+  padding-top: 350px;
   padding-bottom: 50px;
-  gap: 50px;
+  gap: 30px;
 
   span {
     color: $secondary-color;
@@ -19,7 +19,7 @@
 
   .product-heading {
     color: $primary-text-color;
-    font-size: $heading-mobile-font-size;
+    font-size: $mobile-heading-font-size;
     padding: 0;
     margin: 0;
   }
@@ -37,7 +37,7 @@
       width: 250px;
       padding: 20px;
       background-color: white;
-      border-radius: 80px 20px 20px 20px;
+      border-radius: 10px;
       box-shadow: $card-box-shadow;
       display: flex;
       flex-direction: column;
@@ -58,6 +58,13 @@
       }
       h1 {
         color: $primary-text-color;
+        font-size: $product-title-font-size;
+        margin: 0;
+        padding: 0;
+      }
+
+      p{
+        line-height: $paragraph-line-height;
       }
 
       .actions {
@@ -112,6 +119,13 @@
   .products {
     padding-top: 150px;
     padding-bottom: 150px;
+
+    .products-container{
+
+      .product{
+        border-radius: 80px 20px 20px 20px;
+      }
+    }
 
     .product-heading {
       font-size: $heading-font-size;

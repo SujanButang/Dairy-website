@@ -133,6 +133,7 @@
       }
 
       h1 {
+        font-size: $mobile-heading-font-size;
         color: $primary-text-color;
       }
 
@@ -250,6 +251,9 @@
 
     .about{
       .right{
+        h1{
+          font-size: $heading-font-size
+        }
         button{
           @include primaryButton();
         }

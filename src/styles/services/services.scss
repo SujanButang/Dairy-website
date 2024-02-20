@@ -26,7 +26,7 @@
     }
     .service-title {
       color: $primary-text-color;
-      font-size: $heading-mobile-font-size;
+      font-size: $mobile-heading-font-size;
       font-weight: $heading-font-weight;
     }
 
@@ -70,7 +70,7 @@
     }
 
     h3 {
-      font-size: $mobile-heading-font-size;
+      font-size: $product-title-font-size;
       font-weight: $heading-font-weight;
       color: $primary-text-color;
       padding: 0;
@@ -120,7 +120,7 @@
 
 @media screen and (min-width: 1300px) {
   .services {
-    padding: 100px 0px 100px 0px;
+    padding: 50px 0px 50px 0px;
     flex-direction: row;
     height: 90vh;
 

@@ -29,7 +29,7 @@
       margin: 5px 0px 0px 0px;
       padding: 0;
       color: $primary-text-color;
-      font-size: $heading-mobile-font-size;
+      font-size: $mobile-heading-font-size;
       font-weight: $heading-font-weight;
     }
     p {
@@ -38,11 +38,10 @@
   }
 }
 
-@media screen and (min-width:768px){
-  .advantages{
-    width: 100%;
-    .advantage-image{
-      img{
+@media screen and (min-width: 768px) {
+  .advantages {
+    .advantage-image {
+      img {
         border-radius: 0px 80px 0px 0px;
       }
     }
@@ -51,6 +50,7 @@
 
 @media screen and (min-width: 1200px) {
   .advantages {
+    width: 100%;
     flex-direction: row;
     position: relative;
 
