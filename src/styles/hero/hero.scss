@@ -7,11 +7,14 @@
   padding: 50px;
   gap: 20px;
   background-image: url("/banner.jpg");
+  background-repeat: no-repeat;
   height: calc(100vh - 100px);
   background-position: center;
+  background-size: cover;
   color: white;
   position: relative;
   z-index: 1;
+  width: 100vw;
 
   span {
     color: $secondary-color;
