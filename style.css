@@ -408,7 +408,6 @@ template {
   color: white;
   position: relative;
   z-index: 1;
-  width: 100vw;
 }
 .hero span {
   color: #f8ab13;
