@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script type="module" crossorigin src="./assets/index-XQZKQTyq.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-81efWRVX.css">
+    <script type="module" crossorigin src="./assets/index-xepSroSq.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-E5vobpfB.css">
   </head>
   <body>
     <!--Header-->
@@ -17,12 +17,12 @@
       <nav class="nav-bar">
         <ul class="nav-list">
           <li>
-            <a href="#"> Home </a>
+            <a href="#hero"> Home </a>
           </li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Blogs</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
         <a href="#" class="menu"><img src="./hamburger.svg" alt="" /></a>
       </nav>
@@ -31,7 +31,7 @@
 
     <main class="main">
       <!--hero-->
-      <section class="hero">
+      <section class="hero" id="hero">
         <span>Join the Dairy Journey</span>
         <h1>Pure Goodness From Our Dairy To Your Table.</h1>
         <p>
@@ -65,7 +65,7 @@
         </div>
 
         <!--About-->
-        <div class="about">
+        <div class="about" id="about">
           <div class="left">
             <img src="./assets/about-1-a49rOVtY.jpg" alt="" class="image" />
             <div class="left-badge">
@@ -139,7 +139,7 @@
       </section>
       <!--About Us End-->
       <!--Our Products-->
-      <section class="products">
+      <section class="products" id="products">
         <span>Our all products</span>
         <h1 class="product-heading">View All Product</h1>
         <div class="products-container container">
@@ -403,7 +403,7 @@
       </section>
       <!--Dairy Program End-->
       <!--Blogs-->
-      <section class="blogs-container container">
+      <section class="blogs-container container" id="blogs">
         <span class="section-title">Blogs & News</span>
         <h1>Special Information</h1>
         <div class="blogs">
@@ -466,6 +466,37 @@
               /></a>
             </div>
           </div>
+          <div class="blog">
+            <figure>
+              <img src="./assets/milk matters-7jaeDO3Q.jpg" alt="" />
+
+              <span>information</span>
+            </figure>
+            <div class="blog-details">
+              <h2>
+                Milk Matters: Exploring the Wonders of Nature's Perfect Food
+              </h2>
+              <div class="published-details">
+                <span>
+                  <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='20'%20height='20'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='currentColor'%20stroke-width='1'%20stroke-linecap='round'%20stroke-linejoin='round'%20class='lucide%20lucide-user'%3e%3cpath%20d='M19%2021v-2a4%204%200%200%200-4-4H9a4%204%200%200%200-4%204v2'/%3e%3ccircle%20cx='12'%20cy='7'%20r='4'/%3e%3c/svg%3e" alt="" />
+                  Sujan Rai
+                </span>
+                <span>
+                  <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='20'%20height='20'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='currentColor'%20stroke-width='1'%20stroke-linecap='round'%20stroke-linejoin='round'%20class='lucide%20lucide-calendar'%3e%3cpath%20d='M8%202v4'/%3e%3cpath%20d='M16%202v4'/%3e%3crect%20width='18'%20height='18'%20x='3'%20y='4'%20rx='2'/%3e%3cpath%20d='M3%2010h18'/%3e%3c/svg%3e" alt="" />
+                  March 3, 2023
+                </span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                laudantium totam enim temporibus incidunt unde inventore libero
+                deleniti nostrum possimus hic, commodi aliquam voluptatibus illo
+                sunt sequi amet, suscipit nisi?
+              </p>
+              <a href="#"
+                >Read More <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%233c86cb'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%20class='lucide%20lucide-move-right'%3e%3cpath%20d='M18%208L22%2012L18%2016'/%3e%3cpath%20d='M2%2012H22'/%3e%3c/svg%3e" alt=""
+              /></a>
+            </div>
+          </div>
         </div>
       </section>
       <!--Blogs End-->
@@ -488,7 +519,7 @@
       </section>
       <!--Newletter end-->
     </main>
-    <footer class="footer-container">
+    <footer class="footer-container" id="footer">
       <div class="footer">
         <div class="contact">
           <h3>Contact</h3>

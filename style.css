@@ -328,6 +328,7 @@ template {
 
 :root {
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 :root body {
   width: 100vw;
@@ -1314,15 +1315,15 @@ template {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
 }
 .blogs-container .blogs .blog {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 300px;
-  max-width: 600px;
-  height: 800px;
+  max-width: 400px;
+  height: 600px;
   padding: 10px;
   overflow: hidden;
   cursor: pointer;
