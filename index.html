@@ -5,6 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Vite App</title>
   </head>
   <body>
@@ -23,17 +27,34 @@
           <li><a href="#blogs">Blogs</a></li>
           <li><a href="#footer">Contact</a></li>
         </ul>
-        <a href="#" class="menu"><img src="/hamburger.svg" alt="" /></a>
+        <button class="menu" id="menu-btn">
+          <img src="/hamburger.svg" alt="" />
+        </button>
       </nav>
+      <!--Mobile Navigation-->
+      <nav class="mobile-nav-bar" id="mobile-nav-bar">
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="#hero"> Home </a>
+          </li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <button class="menu" id="close">
+            <img src="/cross.svg" alt="" />
+          </button>      </nav>
+        </ul>
+      <!--Mobile Navigation End-->
     </header>
     <!--Header End-->
 
     <main class="main">
       <!--hero-->
       <section class="hero" id="hero">
-        <span>Join the Dairy Journey</span>
-        <h1>Pure Goodness From Our Dairy To Your Table.</h1>
-        <p>
+        <span class="hero-section">Join the Dairy Journey</span>
+        <h1 class="hero-title">Pure Goodness From Our Dairy To Your Table.</h1>
+        <p class="hero-desc">
           Experience pure dairy joy at [Dairy Name]. From farm to table, savor
           the freshest delights in every sip and bite. Join us for a journey of
           unrivaled flavor and quality.
@@ -49,14 +70,16 @@
       <section class="about-us container">
         <div class="welcome">
           <div class="top">
-            <span>Farm Perfect Dairy</span>
-            <h1>Welcome to our Dairy</h1>
-            <p>
+            <span class="welcome-section">Farm Perfect Dairy</span>
+            <h1 class="welcome-title">Welcome to our Dairy</h1>
+            <p class="welcome-desc">
               We take pride in delivering the freshest and finest dairy products
               straight to your table. From creamy milk to delectable cheeses,
               each product is crafted with care and passion.
             </p>
-            <a href="#">Know Us More <img src="/arrow copy.svg" alt="" /></a>
+            <a href="#" class="welcome-anchor"
+              >Know Us More <img src="/arrow copy.svg" alt=""
+            /></a>
           </div>
           <figure class="buttom">
             <img src="/dairy.jpg" alt="" class="welcome-image" />
@@ -87,17 +110,17 @@
               <div class="vision">
                 <h5>Our Vision</h5>
                 <ul class="vision-list">
-                  <li>Vision 1</li>
-                  <li>Vision 2</li>
-                  <li>Vision 3</li>
+                  <li><img src="./public/check.svg" alt="" />Vision 1</li>
+                  <li><img src="./public/check.svg" alt="" />Vision 2</li>
+                  <li><img src="./public/check.svg" alt="" />Vision 3</li>
                 </ul>
               </div>
               <div class="mission">
                 <h5>Our Mission</h5>
                 <ul class="mission-list">
-                  <li>Mission 1</li>
-                  <li>Mission 2</li>
-                  <li>Mission 3</li>
+                  <li><img src="./public/check.svg" alt="" />Mission 1</li>
+                  <li><img src="./public/check.svg" alt="" />Mission 2</li>
+                  <li><img src="./public/check.svg" alt="" />Mission 3</li>
                 </ul>
               </div>
             </div>
@@ -563,6 +586,7 @@
         </div>
       </div>
     </footer>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

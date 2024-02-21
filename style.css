@@ -337,6 +337,7 @@ template {
   align-items: center;
   overflow-x: hidden;
   color: #7a7a7a;
+  position: relative;
 }
 :root body main {
   display: flex;
@@ -355,6 +356,7 @@ template {
   top: 0;
   z-index: 999;
   background-color: #fff;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
 }
 .nav .logo {
   width: 20%;
@@ -383,12 +385,56 @@ template {
 .nav .nav-bar .nav-list a:hover {
   color: #3c86cb;
 }
+.nav .mobile-nav-bar {
+  display: none;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  right: 0;
+  top: 0;
+  min-height: 667px;
+  max-height: 100%;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+.nav .mobile-nav-bar .mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 50px;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+}
+.nav .mobile-nav-bar .mobile-nav-list a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav .mobile-nav-bar .mobile-nav-list #close {
+  position: absolute;
+  top: -50%;
+  right: 20px;
+}
+.nav .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
 
 @media screen and (min-width: 768px) {
   .nav .nav-bar .nav-list {
     display: flex;
   }
   .nav .nav-bar .menu {
+    display: none;
+  }
+  .nav .mobile-nav-bar {
     display: none;
   }
 }
@@ -526,6 +572,7 @@ template {
   margin: 0;
   padding: 0;
   height: 50%;
+  overflow: hidden;
 }
 .about-us .welcome .buttom .welcome-image {
   width: 100%;
@@ -566,6 +613,7 @@ template {
   width: 100%;
   background-color: #103371;
   border-radius: 0px 0px 10px 10px;
+  z-index: 9;
 }
 .about-us .about .left .left-badge h3 {
   color: white;
@@ -582,6 +630,7 @@ template {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  z-index: 1;
 }
 .about-us .about .center .image {
   width: 100%;
@@ -632,6 +681,9 @@ template {
 .about-us .about .right .vision-mission ul li {
   line-height: 25px;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .about-us .about .right button {
   border-radius: 5px;
@@ -1370,6 +1422,8 @@ template {
 }
 .blogs-container .blogs .blog .blog-details p {
   line-height: 25px;
+  height: 75px;
+  overflow: hidden;
 }
 .blogs-container .blogs .blog .blog-details a {
   display: flex;

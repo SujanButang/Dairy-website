@@ -53,6 +53,7 @@
       margin: 0;
       padding: 0;
       height: 50%;
+      overflow: hidden;
       .welcome-image {
         width: 100%;
         height: 100%;
@@ -95,6 +96,7 @@
         width: 100%;
         background-color: $primary-text-color;
         border-radius: 0px 0px 10px 10px;
+        z-index: 9;
 
         h3 {
           color: white;
@@ -114,6 +116,7 @@
       overflow: hidden;
       margin: 0;
       padding: 0;
+      z-index: 1;
       .image {
         width: 100%;
         height: 100%;
@@ -168,6 +171,9 @@
           li {
             line-height: $paragraph-line-height;
             font-size: $thin-font-size;
+            display: flex;
+            align-items: center;
+            gap: 5px
           }
         }
       }

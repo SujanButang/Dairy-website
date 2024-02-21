@@ -9,6 +9,7 @@
   top: 0;
   z-index: 999;
   background-color: #fff;
+  box-shadow: $card-box-shadow;
 
   .logo {
     width: 20%;
@@ -41,6 +42,52 @@
       color: $secondary-text-color;
     }
   }
+
+  .mobile-nav-bar {
+    display: none;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 0;
+    min-height: 667px;
+    max-height: 100%;
+    box-shadow: $card-box-shadow;
+    width: 80%;
+
+
+    .mobile-nav-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 50px;
+      padding: 0;
+      list-style: none;
+      font-size: $nav-link-font-size;
+      font-weight: $nav-link-font-weight;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #close{
+        position: absolute;
+        top: -50%;
+        right: 20px;
+      }
+    }
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -50,9 +97,13 @@
         display: flex;
       }
 
-      .menu{
+      .menu {
         display: none;
       }
+    }
+
+    .mobile-nav-bar {
+      display: none;
     }
   }
 }

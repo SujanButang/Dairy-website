@@ -80,6 +80,8 @@
         }
         p {
           line-height: $paragraph-line-height;
+          height: calc($paragraph-line-height * 3);
+          overflow: hidden;
         }
         a {
           display: flex;
