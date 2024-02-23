@@ -1,11 +1,11 @@
 .nav {
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   color: $primary-text-color;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
   background-color: #fff;
