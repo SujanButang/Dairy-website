@@ -1,0 +1,45 @@
+.heading{
+    background-color: $primary-text-color;
+    width: 100vw;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .heading-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+
+        h3{
+            font-size: $section-mobile-size;
+            font-weight: $section-font-weight;
+            color:$secondary-color;
+        }
+
+        h1{
+            font-size: $mobile-heading-font-size;
+            font-weight: $heading-font-weight;
+            color:white;
+            margin:0;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .heading{
+
+        .heading-container{
+
+            h3{
+                font-size: $section-font-size;
+            }
+
+            h1{
+                font-size: $heading-font-size;
+            }
+        }
+    }
+}

@@ -13,6 +13,10 @@
     color: $paragraph-font-color;
     position: relative;
 
+    a{
+      text-decoration: none;
+    }
+
     main {
       display: flex;
       flex-direction: column;

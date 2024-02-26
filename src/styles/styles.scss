@@ -5,14 +5,20 @@
 @import "./partials/base";
 @import "./partials/mixins";
 
-@import "./header/header.scss";
-@import "./hero/hero.scss";
-@import "./about-us/aboutus.scss";
-@import "./products/products.scss";
-@import "./services/services.scss";
-@import "./advantages/advantages.scss";
-@import "./testimonials/testimonials.scss";
-@import "./programs/programs.scss";
-@import "./blogs/blogs.scss";
-@import "./newsletter/newsletter.scss";
-@import "./footer/footer.scss";
+
+//Home page
+@import "./home/header/header.scss";
+@import "./home/hero/hero.scss";
+@import "./home/about-us/aboutus.scss";
+@import "./home/products/products.scss";
+@import "./home/services/services.scss";
+@import "./home/advantages/advantages.scss";
+@import "./home/testimonials/testimonials.scss";
+@import "./home/programs/programs.scss";
+@import "./home/blogs/blogs.scss";
+@import "./home/newsletter/newsletter.scss";
+@import "./home/footer/footer.scss";
+
+//About Page
+@import "./about/header/header.scss";
+@import "./about/aboutus/aboutus.scss";
