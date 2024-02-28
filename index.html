@@ -14,23 +14,29 @@
   <body>
     <!--Header-->
     <header class="nav">
-      <figure class="logo">
-        <h1>LOGO</h1>
-      </figure>
-      <nav class="nav-bar">
-        <ul class="nav-list">
-          <li>
-            <a href="#hero"> Home </a>
-          </li>
-          <li><a href="/src/pages/about/about.html">About</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#blogs">Blogs</a></li>
-          <li><a href="#footer">Contact</a></li>
-        </ul>
-        <button class="menu" id="menu-btn">
-          <img src="/hamburger.svg" alt="" />
-        </button>
-      </nav>
+      <div class="container wrapper">
+        <figure class="logo">
+          <h1>LOGO</h1>
+        </figure>
+        <nav class="nav-bar">
+          <ul class="nav-list">
+            <li>
+              <a href="#hero"> Home </a>
+            </li>
+            <li><a href="/src/pages/about/about.html">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+          <button class="menu" id="menu-btn">
+            <img src="/hamburger.svg" alt="" />
+          </button>
+          <button class="menu" id="close">
+            <img src="/cross.svg" alt="" />
+          </button>
+        </nav>
+      </div>
+
       <!--Mobile Navigation-->
       <nav class="mobile-nav-bar" id="mobile-nav-bar">
         <ul class="mobile-nav-list">
@@ -41,9 +47,6 @@
           <li><a href="#products">Products</a></li>
           <li><a href="#blogs">Blogs</a></li>
           <li><a href="#footer">Contact</a></li>
-          <button class="menu" id="close">
-            <img src="/cross.svg" alt="" />
-          </button>
         </ul>
       </nav>
       <!--Mobile Navigation End-->
@@ -353,63 +356,63 @@
               sapiente temporibus ab delectus aliquid? Iure voluptate, qui
               distinctio optio neque numquam.
             </p>
-            <div class="controls">
-              <button id="button-left">
-                <img src="./public/arrow-left.svg" alt="" />
-              </button>
-              <button id="button-right">
-                <img src="./public/arrow-right.svg" alt="" />
-              </button>
-            </div>
           </div>
 
-          <div class="testimonies">
-            <div class="testimony-window">
-              <div class="testimony">
-                <figure>
-                  <img src="./public/user.png" alt="" />
-                </figure>
-                <h4>Sujan Rai</h4>
-                <span>Happy Client</span>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
-                  tempora doloribus iste inventore, deserunt reiciendis nostrum
-                  facere nobis at exercitationem rem ad autem accusantium quidem
-                  ut quis. Ut, repudiandae reiciendis.
-                </p>
-                <div class="pattern"></div>
-                <img src="./public/quote.svg" alt="" class="quote" />
-              </div>
-              <div class="testimony">
-                <figure>
-                  <img src="./public/user.png" alt="" />
-                </figure>
-                <h4>Sujan Rai</h4>
-                <span>Happy Client</span>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
-                  tempora doloribus iste inventore, deserunt reiciendis nostrum
-                  facere nobis at exercitationem rem ad autem accusantium quidem
-                  ut quis. Ut, repudiandae reiciendis.
-                </p>
-                <div class="pattern"></div>
-                <img src="./public/quote.svg" alt="" class="quote" />
-              </div>
-              <div class="testimony">
-                <figure>
-                  <img src="./public/user.png" alt="" />
-                </figure>
-                <h4>Sujan Rai</h4>
-                <span>Happy Client</span>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
-                  tempora doloribus iste inventore, deserunt reiciendis nostrum
-                  facere nobis at exercitationem rem ad autem accusantium quidem
-                  ut quis. Ut, repudiandae reiciendis.
-                </p>
-                <div class="pattern"></div>
-                <img src="./public/quote.svg" alt="" class="quote" />
-              </div>
+          <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="testimony">
+                    <figure>
+                      <img src="./public/user.png" alt="" />
+                    </figure>
+                    <h4>Sujan Rai</h4>
+                    <span>Happy Client</span>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Quae tempora doloribus iste inventore, deserunt reiciendis
+                      nostrum facere nobis at exercitationem rem ad autem
+                      accusantium quidem ut quis. Ut, repudiandae reiciendis.
+                    </p>
+                    <div class="pattern"></div>
+                    <img src="./public/quote.svg" alt="" class="quote" />
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="testimony">
+                    <figure>
+                      <img src="./public/user.png" alt="" />
+                    </figure>
+                    <h4>Sujan Rai</h4>
+                    <span>Happy Client</span>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Quae tempora doloribus iste inventore, deserunt reiciendis
+                      nostrum facere nobis at exercitationem rem ad autem
+                      accusantium quidem ut quis. Ut, repudiandae reiciendis.
+                    </p>
+                    <div class="pattern"></div>
+                    <img src="./public/quote.svg" alt="" class="quote" />
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="testimony">
+                    <figure>
+                      <img src="./public/user.png" alt="" />
+                    </figure>
+                    <h4>Sujan Rai</h4>
+                    <span>Happy Client</span>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Quae tempora doloribus iste inventore, deserunt reiciendis
+                      nostrum facere nobis at exercitationem rem ad autem
+                      accusantium quidem ut quis. Ut, repudiandae reiciendis.
+                    </p>
+                    <div class="pattern"></div>
+                    <img src="./public/quote.svg" alt="" class="quote" />
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -586,7 +589,7 @@
       <!--Newletter end-->
     </main>
     <footer class="footer-container" id="footer">
-      <div class="footer">
+      <div class="footer container">
         <div class="contact">
           <h3>Contact</h3>
           <ul>

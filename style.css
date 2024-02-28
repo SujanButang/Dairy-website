@@ -331,8 +331,8 @@ template {
   scroll-behavior: smooth;
 }
 :root body {
-  width: 100vw;
   display: flex;
+  max-width: 100vw;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
@@ -346,31 +346,35 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .nav {
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100px;
   color: #103371;
-  position: fixed;
-  top: 0;
-  z-index: 999;
   background-color: #fff;
   box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 .nav .logo {
   width: 20%;
   font-size: medium;
+}
+.nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 .nav .nav-bar {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: end;
-  padding-right: 30px;
 }
 .nav .nav-bar .nav-list {
   width: 100%;
@@ -389,15 +393,20 @@ template {
   color: #3c86cb;
 }
 .nav .mobile-nav-bar {
-  display: none;
-  align-items: center;
   position: absolute;
   background-color: white;
+  width: 100%;
   right: 0;
-  top: 0;
-  height: 100vh;
+  bottom: -300px;
+  z-index: 9;
+  left: 0;
+  margin: auto;
   box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 .nav .mobile-nav-bar .mobile-nav-list {
   display: flex;
@@ -428,8 +437,11 @@ template {
   background-color: transparent;
   border: none;
 }
+.nav #close {
+  display: none;
+}
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .nav .nav-bar .nav-list {
     display: flex;
   }
@@ -1151,6 +1163,7 @@ template {
   line-height: 25px;
 }
 .testimonials .testimonial-container {
+  width: calc(100% - 40px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1170,39 +1183,12 @@ template {
   font-weight: 800;
   color: #103371;
 }
-.testimonials .testimonial-details .controls {
-  align-self: center;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.testimonials .testimonial-details .controls button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background-color: #103371;
-  padding: 5px;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-}
-.testimonials .testimonies {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
-  width: calc(100vw - 40px);
-  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
-}
-.testimonials .testimonies .testimony-window {
-  display: flex;
+.testimonials .splide {
   width: 100%;
-  gap: 10px;
-  transition: transform 1s ease;
+  padding: 0;
+  margin: 0;
 }
-.testimonials .testimonies .testimony-window .testimony {
+.testimonials .splide .testimony {
   background: white;
   display: flex;
   flex-direction: column;
@@ -1213,30 +1199,30 @@ template {
   position: relative;
   overflow: hidden;
 }
-.testimonials .testimonies .testimony-window .testimony figure {
+.testimonials .splide .testimony figure {
   padding: 0;
   margin: 0;
   height: 100px;
   width: 100px;
 }
-.testimonials .testimonies .testimony-window .testimony figure img {
+.testimonials .splide .testimony figure img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
-.testimonials .testimonies .testimony-window .testimony h4 {
+.testimonials .splide .testimony h4 {
   color: #103371;
   font-size: 20px;
   margin: 0;
   padding: 5px;
 }
-.testimonials .testimonies .testimony-window .testimony p {
+.testimonials .splide .testimony p {
   font-size: 14px;
   line-height: 25px;
   text-align: center;
 }
-.testimonials .testimonies .testimony-window .testimony .pattern {
+.testimonials .splide .testimony .pattern {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -1245,7 +1231,7 @@ template {
   top: -100px;
   right: -100px;
 }
-.testimonials .testimonies .testimony-window .testimony .quote {
+.testimonials .splide .testimony .quote {
   position: absolute;
   top: 30px;
   right: 30px;
@@ -1254,6 +1240,7 @@ template {
 @media screen and (min-width: 768px) {
   .testimonials .testimonial-container {
     flex-direction: row;
+    width: calc(100% - 100px);
   }
   .testimonials .testimonial-container .testimonial-details {
     width: 50%;
@@ -1261,7 +1248,7 @@ template {
   .testimonials .testimonial-container .testimonial-details .controls {
     align-self: flex-start;
   }
-  .testimonials .testimonial-container .testimonies {
+  .testimonials .testimonial-container .splide {
     width: 50%;
   }
 }
@@ -1419,7 +1406,7 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 300px;
+  min-width: 250px;
   max-width: 400px;
   height: 600px;
   padding: 10px;
@@ -1452,6 +1439,7 @@ template {
   font-weight: 700;
   color: #103371;
   height: 90px;
+  overflow: hidden;
   margin: 10px 0px 10px 0px;
 }
 .blogs-container .blogs .blog .blog-details .published-details {
@@ -1490,7 +1478,7 @@ template {
   justify-content: center;
   padding-top: 100px;
   padding-bottom: 100px;
-  min-width: 300px;
+  min-width: 250px;
   align-self: center;
 }
 .newsletter-container .newsletter {
@@ -1581,18 +1569,19 @@ template {
 }
 .footer-container {
   background-color: #103371;
-  width: calc(100vw - 40px);
-  padding: 50px 20px;
+  padding: 50px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  width: 100vw;
 }
 .footer-container .footer {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  width: 100%;
+  gap: 40px;
   align-items: center;
+  padding: 0px;
 }
 .footer-container .footer .contact {
   display: flex;
@@ -1664,23 +1653,13 @@ template {
 }
 
 @media screen and (min-width: 768px) {
-  .footer-container {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
   .footer-container .footer {
-    width: 100%;
     flex-direction: row;
     justify-content: space-evenly;
   }
   .footer-container .footer .links {
     width: 50%;
     justify-content: space-evenly;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer-container .footer {
-    max-width: 1300px;
   }
 }
 .heading {

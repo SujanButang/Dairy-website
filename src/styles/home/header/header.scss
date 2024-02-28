@@ -1,19 +1,23 @@
 .nav {
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100px;
   color: $primary-text-color;
-  position: fixed;
-  top: 0;
-  z-index: 999;
   background-color: #fff;
   box-shadow: $card-box-shadow;
-
+  position: relative;
   .logo {
     width: 20%;
     font-size: medium;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .nav-bar {
@@ -21,7 +25,6 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    padding-right: 30px;
 
     .nav-list {
       width: 100%;
@@ -44,16 +47,20 @@
   }
 
   .mobile-nav-bar {
-    display: none;
-    align-items: center;
     position: absolute;
     background-color: white;
+    width: 100%;
     right: 0;
-    top: 0;
-    height: 100vh;
+    bottom: -300px;
+    z-index: 9;
+    left: 0;
+    margin: auto;
     box-shadow: $card-box-shadow;
-    width: 80%;
-
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
 
     .mobile-nav-list {
       display: flex;
@@ -73,7 +80,7 @@
         color: inherit;
       }
 
-      #close{
+      #close {
         position: absolute;
         top: -50%;
         right: 20px;
@@ -87,9 +94,12 @@
     background-color: transparent;
     border: none;
   }
+  #close{
+    display: none;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .nav {
     .nav-bar {
       .nav-list {

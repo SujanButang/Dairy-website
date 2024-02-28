@@ -1,18 +1,18 @@
 .footer-container {
   background-color: $primary-text-color;
-  width: calc(100vw - 40px);
-  padding: 50px 20px;
-
+  padding: 50px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  width: 100vw;
 
   .footer {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    width: 100%;
+    gap: 40px;
     align-items: center;
+    padding: 0px;
     .contact {
       display: flex;
       flex-direction: column;
@@ -88,26 +88,16 @@
 
 @media screen and (min-width: 768px) {
   .footer-container {
-    padding-left: 50px;
-    padding-right: 50px;
 
-    .footer{
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-
-        .links{
-            width: 50%;
-            justify-content: space-evenly;
-        }
-    }
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-container {
     .footer {
-      max-width: 1300px;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .links {
+        width: 50%;
+        justify-content: space-evenly;
+      }
     }
   }
 }
+

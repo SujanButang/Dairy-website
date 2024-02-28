@@ -12,6 +12,7 @@
   }
 
   .testimonial-container {
+    width: calc(100% - 40px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,94 +32,62 @@
       font-weight: $heading-font-weight;
       color: $primary-text-color;
     }
-
-    .controls {
-      align-self: center;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-
-      button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        background-color: $primary-text-color;
-        padding: 5px;
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
-        cursor: pointer;
-      }
-    }
   }
 
-  .testimonies {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow-x: hidden;
-    width: calc(100vw - 40px);
-    box-shadow: $card-box-shadow;
-
-
-    .testimony-window {
+  .splide {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    .testimony {
+      background: white;
       display: flex;
-      width: 100%;
-      gap: 10px;
-      transition: transform 1s ease;
+      flex-direction: column;
+      align-items: center;
+      min-width: calc(100% - 40px);
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
 
-      .testimony {
-        background: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: calc(100% - 40px);
-        justify-content: center;
-        padding: 20px;
-        position: relative;
-        overflow: hidden;
-
-        figure {
-          padding: 0;
-          margin: 0;
-          height: 100px;
-          width: 100px;
-          img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-          }
-        }
-
-        h4 {
-          color: $primary-text-color;
-          font-size: $section-font-size;
-          margin: 0;
-          padding: 5px;
-        }
-        p {
-          font-size: $thin-font-size;
-          line-height: $paragraph-line-height;
-          text-align: center;
-        }
-
-        .pattern {
-          height: 200px;
-          width: 200px;
+      figure {
+        padding: 0;
+        margin: 0;
+        height: 100px;
+        width: 100px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
           border-radius: 50%;
-          background-color: $primary-text-color;
-          position: absolute;
-          top: -100px;
-          right: -100px;
         }
+      }
 
-        .quote {
-          position: absolute;
-          top: 30px;
-          right: 30px;
-        }
+      h4 {
+        color: $primary-text-color;
+        font-size: $section-font-size;
+        margin: 0;
+        padding: 5px;
+      }
+      p {
+        font-size: $thin-font-size;
+        line-height: $paragraph-line-height;
+        text-align: center;
+      }
+
+      .pattern {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-color: $primary-text-color;
+        position: absolute;
+        top: -100px;
+        right: -100px;
+      }
+
+      .quote {
+        position: absolute;
+        top: 30px;
+        right: 30px;
       }
     }
   }
@@ -129,6 +98,7 @@
     // width: 100%;
     .testimonial-container {
       flex-direction: row;
+      width: calc(100% - 100px);
 
       .testimonial-details {
         width: 50%;
@@ -136,7 +106,7 @@
           align-self: flex-start;
         }
       }
-      .testimonies {
+      .splide {
         width: 50%;
       }
     }
