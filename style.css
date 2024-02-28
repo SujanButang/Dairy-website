@@ -1665,7 +1665,7 @@ template {
 .heading {
   background-color: #103371;
   width: 100vw;
-  padding-top: 150px;
+  padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
   align-items: center;
@@ -1680,6 +1680,108 @@ template {
   font-size: 16px;
   font-weight: 600;
   color: #f8ab13;
+}
+.heading .heading-container h3 .nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  color: #103371;
+  background-color: #fff;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.heading .heading-container h3 .nav .logo {
+  width: 20%;
+  font-size: medium;
+}
+.heading .heading-container h3 .nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.heading .heading-container h3 .nav .nav-bar {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.heading .heading-container h3 .nav .nav-bar .nav-list {
+  width: 100%;
+  display: none;
+  list-style: none;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 16px;
+  font-weight: 600;
+}
+.heading .heading-container h3 .nav .nav-bar .nav-list a {
+  text-decoration: none;
+  color: inherit;
+}
+.heading .heading-container h3 .nav .nav-bar .nav-list a:hover {
+  color: #3c86cb;
+}
+.heading .heading-container h3 .nav .mobile-nav-bar {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  right: 0;
+  bottom: -300px;
+  z-index: 9;
+  left: 0;
+  margin: auto;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.heading .heading-container h3 .nav .mobile-nav-bar .mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 50px;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+}
+.heading .heading-container h3 .nav .mobile-nav-bar .mobile-nav-list a {
+  text-decoration: none;
+  color: inherit;
+}
+.heading .heading-container h3 .nav .mobile-nav-bar .mobile-nav-list #close {
+  position: absolute;
+  top: -50%;
+  right: 20px;
+}
+.heading .heading-container h3 .nav .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+.heading .heading-container h3 .nav #close {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .heading .heading-container h3 .nav .nav-bar .nav-list {
+    display: flex;
+  }
+  .heading .heading-container h3 .nav .nav-bar .menu {
+    display: none;
+  }
+  .heading .heading-container h3 .nav .mobile-nav-bar {
+    display: none;
+  }
 }
 .heading .heading-container h1 {
   font-size: 32px;
@@ -1696,51 +1798,146 @@ template {
     font-size: 52px;
   }
 }
-.about-us-section {
+.about-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-.about-us-section .about-image {
-  height: 60vh;
+.about-section .about-image {
+  height: 70vh;
   margin: 0;
   padding: 0;
   flex: 1;
 }
-.about-us-section .about-image img {
+.about-section .about-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
 }
-.about-us-section .about-us-section-details {
+.about-section .about-us-section-details {
   flex: 1;
 }
-.about-us-section .about-us-section-details h3 {
+.about-section .about-us-section-details h3 {
   font-size: 16px;
   font-weight: 600;
   color: #f8ab13;
   margin: 10px;
 }
-.about-us-section .about-us-section-details h1 {
+.about-section .about-us-section-details h1 {
   font-size: 32px;
   font-weight: 800;
   color: #103371;
   margin: 0;
 }
-.about-us-section .about-us-section-details p {
+.about-section .about-us-section-details p {
   line-height: 25px;
 }
 
 @media screen and (min-width: 768px) {
-  .about-us-section {
+  .about-section {
     flex-direction: row;
+    gap: 20px;
   }
-  .about-us-section .about-us-section-details h3 {
+  .about-section .about-image img {
+    border-radius: 80px 0px 40px 0px;
+  }
+  .about-section .about-us-section-details h3 {
     font-size: 20px;
   }
-  .about-us-section .about-us-section-details h1 {
+  .about-section .about-us-section-details h1 {
     font-size: 52px;
+  }
+}
+.why-choose-us {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 150px;
+}
+.why-choose-us .why-choose-us-image {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 350px;
+}
+.why-choose-us .why-choose-us-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.why-choose-us .why-choose-us-advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.why-choose-us .why-choose-us-advantages span {
+  color: #f8ab13;
+  font-size: 20px;
+  font-weight: 600;
+}
+.why-choose-us .why-choose-us-advantages h1 {
+  margin: 10px 0px 0px 0px;
+  padding: 0;
+  color: #103371;
+  font-size: 32px;
+  font-weight: 800;
+}
+.why-choose-us .why-choose-us-advantages p {
+  line-height: 25px;
+}
+.why-choose-us .why-choose-us-advantages .advantage-item {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+.why-choose-us .why-choose-us-advantages .advantage-item h2 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #103371;
+  margin: 0;
+  padding: 0;
+}
+.why-choose-us .why-choose-us-advantages .advantage-item p {
+  margin: 0;
+}
+.why-choose-us .why-choose-us-advantages .advantage-item .item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: -3px;
+}
+
+@media screen and (min-width: 768px) {
+  .why-choose-us .why-choose-us-image img {
+    border-radius: 0px 80px 0px 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .why-choose-us {
+    margin-top: 100px;
+    width: 100%;
+    flex-direction: row-reverse;
+    position: relative;
+  }
+  .why-choose-us .why-choose-us-image {
+    width: 60%;
+    height: 600px;
+  }
+  .why-choose-us .why-choose-us-image img {
+    border-radius: 0;
+  }
+  .why-choose-us .why-choose-us-advantages {
+    position: absolute;
+    width: 40%;
+    padding: 40px;
+    background-color: #f0fcff;
+    top: 8%;
+    right: 50%;
+    border-radius: 80px 0px 80px 0px;
   }
 }
 

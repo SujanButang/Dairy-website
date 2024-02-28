@@ -1,0 +1,163 @@
+.heading{
+    background-color: $primary-text-color;
+    width: 100vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .heading-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+
+        h3{
+            font-size: $section-mobile-size;
+            font-weight: $section-font-weight;.nav {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+                color: $primary-text-color;
+                background-color: #fff;
+                box-shadow: $card-box-shadow;
+                position: relative;
+                .logo {
+                  width: 20%;
+                  font-size: medium;
+                }
+              
+                .wrapper {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 100%;
+                }
+              
+                .nav-bar {
+                  width: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: end;
+              
+                  .nav-list {
+                    width: 100%;
+                    display: none;
+                    list-style: none;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    font-size: $nav-link-font-size;
+                    font-weight: $nav-link-font-weight;
+              
+                    a {
+                      text-decoration: none;
+                      color: inherit;
+                    }
+                  }
+              
+                  .nav-list a:hover {
+                    color: $secondary-text-color;
+                  }
+                }
+              
+                .mobile-nav-bar {
+                  position: absolute;
+                  background-color: white;
+                  width: 100%;
+                  right: 0;
+                  bottom: -300px;
+                  z-index: 9;
+                  left: 0;
+                  margin: auto;
+                  box-shadow: $card-box-shadow;
+                  transform: scaleY(0);
+                  transform-origin: top;
+                  transition: transform;
+                  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                  transition-duration: 150ms;
+              
+                  .mobile-nav-list {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    gap: 50px;
+                    padding: 0;
+                    list-style: none;
+                    font-size: $nav-link-font-size;
+                    font-weight: $nav-link-font-weight;
+                    position: relative;
+              
+                    a {
+                      text-decoration: none;
+                      color: inherit;
+                    }
+              
+                    #close {
+                      position: absolute;
+                      top: -50%;
+                      right: 20px;
+                    }
+                  }
+                }
+                .menu {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: transparent;
+                  border: none;
+                }
+                #close{
+                  display: none;
+                }
+              }
+              
+              @media screen and (min-width: 1200px) {
+                .nav {
+                  .nav-bar {
+                    .nav-list {
+                      display: flex;
+                    }
+              
+                    .menu {
+                      display: none;
+                    }
+                  }
+              
+                  .mobile-nav-bar {
+                    display: none;
+                  }
+                }
+              }
+              
+            color:$secondary-color;
+        }
+
+        h1{
+            font-size: $mobile-heading-font-size;
+            font-weight: $heading-font-weight;
+            color:white;
+            margin:0;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .heading{
+
+        .heading-container{
+
+            h3{
+                font-size: $section-font-size;
+            }
+
+            h1{
+                font-size: $heading-font-size;
+            }
+        }
+    }
+}

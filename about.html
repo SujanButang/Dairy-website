@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dairy</title>
-    <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -13,36 +13,39 @@
   <body>
     <!--Header-->
     <header class="nav">
-      <figure class="logo">
-        <h1>LOGO</h1>
-      </figure>
-      <nav class="nav-bar">
-        <ul class="nav-list">
-          <li>
-            <a href="#hero"> Home </a>
-          </li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#blogs">Blogs</a></li>
-          <li><a href="#footer">Contact</a></li>
-        </ul>
-        <button class="menu" id="menu-btn">
-          <img src="/hamburger.svg" alt="" />
-        </button>
-      </nav>
+      <div class="container wrapper">
+        <figure class="logo">
+          <h1>LOGO</h1>
+        </figure>
+        <nav class="nav-bar">
+          <ul class="nav-list">
+            <li>
+              <a href="index.html"> Home </a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+          <button class="menu" id="menu-btn">
+            <img src="/hamburger.svg" alt="" />
+          </button>
+          <button class="menu" id="close">
+            <img src="/cross.svg" alt="" />
+          </button>
+        </nav>
+      </div>
+
       <!--Mobile Navigation-->
       <nav class="mobile-nav-bar" id="mobile-nav-bar">
         <ul class="mobile-nav-list">
           <li>
-            <a href="#hero"> Home </a>
+            <a href="index.html"> Home </a>
           </li>
-          <li><a href="#about">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#products">Products</a></li>
           <li><a href="#blogs">Blogs</a></li>
           <li><a href="#footer">Contact</a></li>
-          <button class="menu" id="close">
-            <img src="/cross.svg" alt="" />
-          </button>
         </ul>
       </nav>
       <!--Mobile Navigation End-->
@@ -76,6 +79,45 @@
         </div>
       </section>
       <!--About us End-->
+
+      <!--Why Choose Us-->
+      <section class="why-choose-us container">
+        <figure class="why-choose-us-image">
+          <img src="./public/why-choose-us.jpg" alt="" />
+        </figure>
+        <div class="why-choose-us-advantages">
+          <span>Why Choose Us</span>
+          <h1>Unleash the Magic of Farm Crafted Dairy</h1>
+          <p>
+            Indulge in the unparalleled freshness and exceptional quality of our
+            dairy products, where every sip and bite reflects our commitment to
+            providing a wholesome and delightful experience for our valued
+            customers.
+          </p>
+          <div class="advantage-item">
+            <img src="./public/check-square-2.svg" alt="" />
+            <div class="item">
+              <h2>100% Natural</h2>
+              <p>Products are 100% naturally crafted.</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <img src="./public/check-square-2.svg" alt="" />
+            <div class="item">
+              <h2>Best Quality Products</h2>
+              <p>Get quality like none others.</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <img src="./public/check-square-2.svg" alt="" />
+            <div class="item">
+              <h2>Expert Workers</h2>
+              <p>Products made by experienced industry workers and experts.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Why Choose Us End-->
 
       <!--Founder Message-->
       <section class="founer-message container"></section>
@@ -126,5 +168,6 @@
         </div>
       </div>
     </footer>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
