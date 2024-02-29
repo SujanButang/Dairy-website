@@ -914,7 +914,7 @@ template {
 .products .products-container .product:hover p {
   color: white;
 }
-.products .all-products {
+.products .all-products-btn {
   border-radius: 5px;
   padding: 20px 40px 20px 40px;
   border: none;
@@ -943,7 +943,7 @@ template {
   .products .product-heading {
     font-size: 52px;
   }
-  .products .all-products {
+  .products .all-products-btn {
     border-radius: 0px 30px 0px 30px;
     padding: 20px 40px 20px 40px;
     border: none;
@@ -1938,6 +1938,182 @@ template {
     top: 8%;
     right: 50%;
     border-radius: 80px 0px 80px 0px;
+  }
+}
+.all-products {
+  min-height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  gap: 30px;
+  margin: 50px 0px;
+}
+.all-products .products-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.all-products .products-container .product {
+  height: 450px;
+  width: 250px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.all-products .products-container .product .product-image {
+  height: 60%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.all-products .products-container .product .product-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.all-products .products-container .product h1 {
+  color: #103371;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+.all-products .products-container .product p {
+  line-height: 25px;
+}
+.all-products .products-container .product .actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f8ab13;
+}
+.all-products .products-container .product .actions span {
+  font-size: 20px;
+  font-weight: 600;
+}
+.all-products .products-container .product .actions .buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.all-products .products-container .product .actions .buttons .product-button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: #ededf0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.all-products .products-container .product:hover {
+  background-color: #103371;
+}
+.all-products .products-container .product:hover h1 {
+  color: white;
+}
+.all-products .products-container .product:hover p {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .all-products .products-container .product {
+    border-radius: 80px 20px 20px 20px;
+  }
+  .all-products .product-heading {
+    font-size: 52px;
+  }
+  .all-products .all-products {
+    border-radius: 0px 30px 0px 30px;
+    padding: 20px 40px 20px 40px;
+    border: none;
+    background-color: #3c86cb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px auto;
+}
+.contact-us .contact-us-left span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f8ab13;
+}
+.contact-us .contact-us-left h1 {
+  color: #103371;
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+}
+.contact-us .contact-us-left p {
+  line-height: 25px;
+}
+.contact-us .contact-us-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-us .contact-us-right label {
+  font-weight: 600;
+  font-size: 20px;
+  color: #103371;
+}
+.contact-us .contact-us-right input {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px 0;
+}
+.contact-us .contact-us-right textarea {
+  border: 1px solid black;
+}
+.contact-us .contact-us-right button {
+  border-radius: 5px;
+  padding: 20px 40px 20px 40px;
+  border: none;
+  background-color: #3c86cb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+iframe {
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-us {
+    flex-direction: row;
+    gap: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .contact-us .contact-us-left h1 {
+    font-size: 52px;
+  }
+  .contact-us .contact-us-left,
+  .contact-us .contact-us-right {
+    width: 50%;
   }
 }
 

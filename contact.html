@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dairy</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <title>Vite App</title>
   </head>
   <body>
     <!--Header-->
@@ -52,79 +53,53 @@
     </header>
     <!--Header End-->
 
-    <main>
+    <main class="main">
       <!--Page Heading-->
       <section class="heading">
         <div class="heading-container container">
-          <h3>History of Our Dairy</h3>
-          <h1>About Us</h1>
+          <h3>Contact</h3>
+          <h1>Get in Touch</h1>
         </div>
       </section>
-      <!--Page heading end-->
-
-      <!--About us-->
-      <section class="about-section container">
-        <figure class="about-image">
-          <img src="/public/about.jpg" alt="about" />
-        </figure>
-        <div class="about-us-section-details">
-          <h3>About Us</h3>
-          <h1>Providing the Best Quality Products to You Everyday</h1>
+      <!--Heading End-->
+      <!--Contact form-->
+      <section class="contact-us container">
+        <div class="contact-us-left">
+          <span>Say Hi!</span>
+          <h1>Message Us</h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
-            ab reiciendis, dolor odit excepturi, repellendus dolore minus ipsa
-            nulla consequuntur ducimus modi enim ex repudiandae cumque numquam
-            suscipit, fuga unde.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+            eum assumenda nam consequatur rem aspernatur ipsam soluta nobis,
+            dolores, ea quae dolore modi commodi consequuntur cupiditate
+            voluptatum accusantium quos? Tenetur.
           </p>
         </div>
+        <form class="contact-us-right">
+          <label for="name">Name</label>
+          <input type="text" />
+          <label for="email">Email</label>
+          <input type="email" />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <button>Submit</button>
+        </form>
       </section>
-      <!--About us End-->
+      <!--Contact form End-->
+      <!--Map-->
 
-      <!--Why Choose Us-->
-      <section class="why-choose-us container">
-        <figure class="why-choose-us-image">
-          <img src="./public/why-choose-us.jpg" alt="" />
-        </figure>
-        <div class="why-choose-us-advantages">
-          <span>Why Choose Us</span>
-          <h1>Unleash the Magic of Farm Crafted Dairy</h1>
-          <p>
-            Indulge in the unparalleled freshness and exceptional quality of our
-            dairy products, where every sip and bite reflects our commitment to
-            providing a wholesome and delightful experience for our valued
-            customers.
-          </p>
-          <div class="advantage-item">
-            <img src="./public/check-square-2.svg" alt="" />
-            <div class="item">
-              <h2>100% Natural</h2>
-              <p>Products are 100% naturally crafted.</p>
-            </div>
-          </div>
-          <div class="advantage-item">
-            <img src="./public/check-square-2.svg" alt="" />
-            <div class="item">
-              <h2>Best Quality Products</h2>
-              <p>Get quality like none others.</p>
-            </div>
-          </div>
-          <div class="advantage-item">
-            <img src="./public/check-square-2.svg" alt="" />
-            <div class="item">
-              <h2>Expert Workers</h2>
-              <p>Products made by experienced industry workers and experts.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Why Choose Us End-->
-
-      <!--Founder Message-->
-      <section class="founer-message container"></section>
-      <!--Founder Message End-->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14286.304048889142!2d87.26903406368017!3d26.469392539044723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef75d4df1dda71%3A0x7a5c0791724d0c90!2sNeed%20Technosoft%20Pvt%20Ltd!5e0!3m2!1sen!2snp!4v1709183314488!5m2!1sen!2snp"
+        width="100%"
+        height="500"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <!--Map End-->
     </main>
     <footer class="footer-container" id="footer">
-      <div class="footer">
+      <div class="footer container">
         <div class="contact">
           <h3>Contact</h3>
           <ul>
@@ -168,6 +143,7 @@
         </div>
       </div>
     </footer>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
